@@ -1,0 +1,29 @@
+
+How to Train Unveil:
+
+1) set environment variable PERLLIB or PERL5LIB to unveil directory
+
+2) cd into training directory with gff & fasta files
+
+2.5) ln -s <unveil-dir> unveil
+
+3) unveil/get-training-files.pl <*.gff> <*.fasta> <max-num-examples>
+
+4) unveil/build-hmm-templates.pl
+
+### 5) change path on third line of unveil/train-submodels.pl
+
+### 6) change paths in submodels.txt
+
+7) unveil/train-submodels.pl >& messages.txt
+
+8) copy unveil/submodels.txt and unveil/metamodel.hmms into this directory
+
+9) modify paths in submodels.txt
+
+10) unveil/model-combiner metamodel.hmms submodels.txt unveil.hmm
+
+
+
+
+
